@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "919790926620",
+    "project_id": "example-project-c8377",
+    "storage_bucket": "example-project-c8377.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919790926620:android:bf976e94fa789ac82b58d9",
+        "android_client_info": {
+          "package_name": "com.vishnu.example_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAApIISL99ExY69rq8PBwJAThoautP8b8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
