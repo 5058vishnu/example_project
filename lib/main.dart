@@ -1,4 +1,5 @@
 import 'package:example_project/ex/viewProduct.dart';
+import 'package:example_project/state_management/Gextx/Login/view/loginhome.dart';
 import 'package:example_project/state_management/Gextx/view/countgetx.dart';
 import 'package:example_project/state_management/setstate/counterapp.dart';
 import 'package:example_project/text_to_speak.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const GetMaterialApp(
-      home:CounterAppGetX()
+      home:LoginHome()
     );
   }
 }

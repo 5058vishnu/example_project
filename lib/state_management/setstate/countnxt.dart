@@ -1,24 +1,24 @@
-import 'package:example_project/state_management/setstate/countnxt.dart';
 import 'package:flutter/material.dart';
 
-class CounterApp extends StatefulWidget {
-  const CounterApp({super.key});
+class CountNxt extends StatefulWidget {
+  int? incVal;
+
+  CountNxt({Key? key, required this.incVal}) : super(key: key);
 
   @override
-  State<CounterApp> createState() => _CounterAppState();
+  State<CountNxt> createState() => _CountNxtState();
 }
 
-class _CounterAppState extends State<CounterApp> {
-  int count = 0;
+class _CountNxtState extends State<CountNxt> {
   void incCount() {
     setState(() {
-      count = count + 1;
+      widget.incVal = widget.incVal! + 1;
     });
   }
 
   void decCount() {
     setState(() {
-      count = count - 1;
+      widget.incVal = widget.incVal! - 1;
     });
   }
 
@@ -26,17 +26,14 @@ class _CounterAppState extends State<CounterApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Set state"),
+        title: const Text("2nd page"),
         backgroundColor: Colors.teal,
       ),
       body: Container(
         alignment: Alignment.center,
-        width: double.infinity,
-        height: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Counter : $count"),
+          children: [Text("Counter : ${widget.incVal}"),
             const SizedBox(
               height: 20,
             ),
@@ -61,15 +58,6 @@ class _CounterAppState extends State<CounterApp> {
             const SizedBox(
               height: 20,
             ),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => CountNxt(
-                      incVal: count,
-                    ),
-                  ));
-                },
-                child: const Text("Next Page")),
           ],
         ),
       ),

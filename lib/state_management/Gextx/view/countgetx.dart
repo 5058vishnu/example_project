@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 import '../controller/countercontroller.dart';
+import 'countnxt.dart';
 
 class CounterAppGetX extends StatefulWidget {
   const CounterAppGetX({super.key});
@@ -12,14 +13,13 @@ class CounterAppGetX extends StatefulWidget {
 }
 
 class _CounterAppGetXState extends State<CounterAppGetX> {
-  final CounterController _counterController =
-  Get.put(CounterController());
+  final CounterController _counterController = Get.put(CounterController());
   @override
   Widget build(BuildContext context) {
     print("setstate");
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Set state"),
+        title: const Text("Getx count"),
         backgroundColor: Colors.teal,
       ),
       body: Container(
@@ -50,7 +50,16 @@ class _CounterAppGetXState extends State<CounterAppGetX> {
                     },
                     child: const Text("Deccrement")),
               ],
-            )
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Get.off(() => const GetCountNxt(),
+                      transition: Transition.leftToRightWithFade);
+                },
+                child: const Text("Next Page")),
           ],
         ),
       ),
